@@ -14,21 +14,24 @@ myStack=[]
 
 #Opening the file in read mode
 f=open("stackinput.txt","r")
-fcontent=f.read()
+
+inpt=0
 
 #Pushing the elements in the stack
-while (fcontent!=" "):
-    value=(fcontent)
-    push(myStack,value)
+for i in f:
+    value = int(i.strip())
+    myStack.append(value)
+    inpt+=1
 
-#Pushing the elements in the stack
-"""
-for i in range(inpt):
-    value=int(input("Enter the value: "))
-    push(myStack,value)
-"""
+#Closing the file
+f.close()
+
 #Printing the stack
-print(myStack)
+print("Printing the stack, after pushing the elements.",myStack)
+
+#Opening the file in write mode
+f=open("stack.txt","w")
+f.write(str(myStack))
 
 #Searching the elements from the stack
 srch=int(input("Enter the value that you want to search: "))
@@ -47,6 +50,8 @@ if srch in myStack:
         value=int(input("Enter the new value: "))
         myStack[index]=value
         print(myStack)
+        f=open("stack.txt","w")
+        f.write(str(myStack))
 
     elif choice=="No":
         print("Thank you")
