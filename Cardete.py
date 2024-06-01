@@ -37,6 +37,12 @@ def delete(): #function to delete car details
     else:
         print("Car not found")
 
+def print_stack(): #function to print car details
+    global details
+    for i in details:
+        i.print_dete()
+        print("----------------------")
+
 def main(): #function to get car details
     name=input("Enter car name = ")
     year=input("Enter car year = ")
@@ -60,8 +66,8 @@ print("----------------------")
 print("Details of cars are as follows,")
 print("\n")
 
-for i in details: #to print car details
-    i.print_dete()
-    print("----------------------")
+print_stack()
 
 delete() #to delete car details
+
+print_stack()
