@@ -1,24 +1,24 @@
-class car:
-    def __init__(self, name, year, model):
+class car: #class to store car details
+    def __init__(self, name, year, model): #constructor to initialize car details
         self.name = name
         self.year = year
         self.model= model
     
-    def print_dete(self):
+    def print_dete(self): #function to print car details
         print("Car name=",self.name)
         print("Car manufactured year=",self.year)
         print("Car mode=",self.model)
 
 details=[] #list to store car details
 
-def main():
+def main(): #function to get car details
     name=input("Enter car name = ")
     year=input("Enter car year = ")
     model=input("Enter car model = ")
 
-    car1=car(name,year,model)
+    car1=car(name,year,model) #object of car class
 
-    global details
+    global details #to access global variable details
     details.append(car1)
     global ch
     ch=input("Do you want to Add more cars? (y/n):")
@@ -30,11 +30,11 @@ print("\n")
 
 while True:
     main()
-    if ch=='y':
+    if ch=='y': #if user wants to add more cars
         main()
-    elif ch=='n':
+    elif ch=='n': #if user does not want to add more cars
         break
-    else:
+    else: #if user enters invalid choice
         print("Invalid choice")
         print("Please enter valid choice")
         main()
@@ -43,6 +43,6 @@ print("----------------------")
 print("Details of cars are as follows,")
 print("\n")
 
-for i in details:
+for i in details: #to print car details
     i.print_dete()
     print("----------------------")
