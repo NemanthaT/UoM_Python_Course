@@ -69,5 +69,6 @@ print("\n")
 print_stack()
 
 delete() #to delete car details
-
+print("----------------------")
+print("Details of cars are as follows,")
 print_stack()
