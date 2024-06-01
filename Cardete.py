@@ -31,6 +31,7 @@ while True:
     else:
         print("Invalid choice")
         print("Please enter valid choice")
+        main()
 
 print("Details of cars are as follows:")
 for i in details:
