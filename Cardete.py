@@ -15,6 +15,18 @@ def choice(): #function to get user choice
     global ch
     ch=input("Do you want to Add more cars? (y/n): ")
 
+def delete(): #function to delete car details
+    global details
+    n=input("Enter car name to delete = ")
+    m=input("Enter car model= ")
+    for i in details:
+        if i.name==n and i.model==m:
+            details.remove(i)
+            print("Car details deleted successfully")
+            break
+    else:
+        print("Car not found")
+
 def main(): #function to get car details
     name=input("Enter car name = ")
     year=input("Enter car year = ")
@@ -49,3 +61,5 @@ print("\n")
 for i in details: #to print car details
     i.print_dete()
     print("----------------------")
+
+delete() #to delete car details
