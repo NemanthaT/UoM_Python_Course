@@ -20,10 +20,12 @@ def main():
 
     global details
     details.append(car1)
+    global ch
+    ch=input("Do you want to Add more cars? (y/n):")
+    
 
 while True:
     main()
-    ch=input("Do you want to Add more cars? (y/n):")
     if ch=='y':
         main()
     elif ch=='n':
