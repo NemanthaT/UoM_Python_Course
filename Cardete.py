@@ -7,9 +7,13 @@ class car: #class to store car details
     def print_dete(self): #function to print car details
         print("Car name=",self.name)
         print("Car manufactured year=",self.year)
-        print("Car mode=",self.model)
+        print("Car model=",self.model)
 
 details=[] #list to store car details
+
+def choice(): #function to get user choice
+    global ch
+    ch=input("Do you want to Add more cars? (y/n): ")
 
 def main(): #function to get car details
     name=input("Enter car name = ")
@@ -20,8 +24,7 @@ def main(): #function to get car details
 
     global details #to access global variable details
     details.append(car1)
-    global ch
-    ch=input("Do you want to Add more cars? (y/n):")
+    choice()
     
 print("Welcome to car details program")
 print("\n")
@@ -37,7 +40,7 @@ while True:
     else: #if user enters invalid choice
         print("Invalid choice")
         print("Please enter valid choice")
-        main()
+        choice()
 
 print("----------------------")
 print("Details of cars are as follows,")
