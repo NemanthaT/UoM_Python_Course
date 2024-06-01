@@ -23,6 +23,10 @@ def main():
     global ch
     ch=input("Do you want to Add more cars? (y/n):")
     
+print("Welcome to car details program")
+print("\n")
+print("Please enter the details of the car,")
+print("\n")
 
 while True:
     main()
