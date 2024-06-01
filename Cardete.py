@@ -35,7 +35,10 @@ while True:
         print("Please enter valid choice")
         main()
 
-print("Details of cars are as follows:")
+print("----------------------")
+print("Details of cars are as follows,")
+print("\n")
+
 for i in details:
     i.print_dete()
     print("----------------------")
