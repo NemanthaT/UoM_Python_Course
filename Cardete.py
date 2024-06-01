@@ -10,10 +10,20 @@ class car: #class to store car details
         print("Car model=",self.model)
 
 details=[] #list to store car details
-
+con=True #to continue the program
 def choice(): #function to get user choice
     global ch
     ch=input("Do you want to Add more cars? (y/n): ")
+    if ch=='y': #if user wants to add more cars
+        main()
+    elif ch=='n': #if user does not want to add more cars
+        global con
+        con=False
+        return con
+    else: #if user enters invalid choice
+        print("Invalid choice")
+        print("Please enter valid choice")
+        choice()
 
 def delete(): #function to delete car details
     global details
@@ -43,16 +53,8 @@ print("\n")
 print("Please enter the details of the car,")
 print("\n")
 
-while True:
+while con==True:
     main()
-    if ch=='y': #if user wants to add more cars
-        main()
-    elif ch=='n': #if user does not want to add more cars
-        break
-    else: #if user enters invalid choice
-        print("Invalid choice")
-        print("Please enter valid choice")
-        choice()
 
 print("----------------------")
 print("Details of cars are as follows,")
